@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>บันทึกข้อมูลพนักงาน</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; /* จัดให้อยู่กลางหน้าจอทั้งแนวตั้งและแนวนอน */
+            min-height: 100vh; 
+            margin: 0;
+            background-color: #e9ecef; 
+        }
+        .card { 
+            background: white; 
+            padding: 40px; /* เพิ่มพื้นที่ว่างด้านใน */
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); 
+            width: 500px; /* ขยายความกว้างจาก 350px เป็น 500px */
+        }
+        h2 { 
+            text-align: center; 
+            font-size: 28px; /* ขยายขนาดหัวข้อ */
+            margin-bottom: 30px;
+            color: #333;
+        }
+        label { 
+            display: block; 
+            margin-top: 15px; 
+            font-weight: bold; 
+            font-size: 18px; /* ขยายขนาดตัวอักษรของ Label */
+            color: #555;
+        }
+        input, select { 
+            width: 100%; 
+            padding: 12px; /* เพิ่มความสูงของช่องกรอก */
+            margin-top: 8px; 
+            border: 2px solid #ddd; /* ทำให้ขอบหนาขึ้นเล็กน้อย */
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            font-size: 16px; /* ขยายขนาดตัวอักษรในช่องกรอก */
+        }
+        input:focus, select:focus {
+            border-color: #28a745; /* เปลี่ยนสีขอบเมื่อคลิก */
+            outline: none;
+        }
+        button { 
+            width: 100%; 
+            padding: 15px; 
+            margin-top: 30px; 
+            background-color: #28a745; 
+            color: white; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-size: 20px; /* ขยายปุ่มให้ใหญ่ขึ้น */
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        button:hover { 
+            background-color: #218838; 
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>บันทึกข้อมูลพนักงาน</h2>
+        <form method="POST">
+            {% csrf_token %}
+            
+            <label>Full Name</label>
+            <input type="text" name="fullname" placeholder="ระบุชื่อ-นามสกุล" required>
+            
+            <label>Email</label>
+            <input type="email" name="email" placeholder="example@email.com" required>
+            
+            <label>Position</label>
+            <select name="position">
+                <option value="Manager">Manager</option>
+                <option value="Developer">Developer</option>
+                <option value="Hr">Hr</option>
+                <option value="It">It</option>
+            </select>
+            
+            <label>Phone Number</label>
+            <input type="text" name="phone" placeholder="xxx-xxx-xxxx" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
