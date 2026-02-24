@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold text-dark">Gallery</h2>
+        <div class="mx-auto" style="width: 50px; height: 3px; background-color: #27ae60; border-radius: 2px;"></div>
+    </div>
+
+    <div class="row g-3">
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card border-0 shadow-sm overflow-hidden hover-zoom">
+                <img src="{% static 'img/f1.webp' %}" class="img-fluid" style="height: 280px; width: 100%; object-fit: cover;">
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card border-0 shadow-sm overflow-hidden hover-zoom">
+                <img src="{% static 'img/f2.webp' %}" class="img-fluid" style="height: 280px; width: 100%; object-fit: cover;">
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card border-0 shadow-sm overflow-hidden hover-zoom">
+                <img src="{% static 'img/f3.webp' %}" class="img-fluid" style="height: 280px; width: 100%; object-fit: cover;">
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card border-0 shadow-sm overflow-hidden hover-zoom">
+                <img src="{% static 'img/f4.webp' %}" class="img-fluid" style="height: 280px; width: 100%; object-fit: cover;">
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card border-0 shadow-sm overflow-hidden hover-zoom">
+                <img src="{% static 'img/f5.webp' %}" class="img-fluid" style="height: 280px; width: 100%; object-fit: cover;">
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card border-0 shadow-sm overflow-hidden hover-zoom">
+                <img src="{% static 'img/f6.webp' %}" class="img-fluid" style="height: 280px; width: 100%; object-fit: cover;">
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card border-0 shadow-sm overflow-hidden hover-zoom">
+                <img src="{% static 'img/f7.webp' %}" class="img-fluid" style="height: 280px; width: 100%; object-fit: cover;">
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card border-0 shadow-sm overflow-hidden hover-zoom">
+                <img src="{% static 'img/f8.webp' %}" class="img-fluid" style="height: 280px; width: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hover-zoom { transition: transform 0.3s ease; border-radius: 12px; }
+    .hover-zoom:hover { transform: scale(1.05); }
+    img { border-radius: 12px; }
+</style>
+{% endblock %}
